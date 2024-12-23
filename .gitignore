@@ -12,7 +12,8 @@
 config/
 .vscode/
 untrack/
-# data/
+data/
+data-wrong/
 
 # below are standard python ignore files
 # Byte-compiled / optimized / DLL files
