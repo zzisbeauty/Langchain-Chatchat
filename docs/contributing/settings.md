@@ -2,8 +2,6 @@
 
 项目所有配置项由 `chatchat.settings.Settings` 统一管理，代替原来通过 `chatchat/configs/*.py` 配置的方式。
 
-绝大部分配置项沿用了原来的名字和分组，少数进行了整合。
-
 ### 改进后的优点：
 - 配置项与 py 代码分离，减少代码升级带来的麻烦，更改配置更方便
 - 切换不同的 yaml 文件即可加载不同的配置，方便多环境管理和测试
@@ -21,7 +19,6 @@ print(Settings.kb_settings) # 知识库相关配置项
 print(Settings.model_settings) # 模型相关配置项
 print(Settings.tool_settings) # 工具相关配置项
 print(Settings.prompt_settings) # prompt 模板
-
 ```
 
 ** 注意 **：如果使用 `Settings.xx_settings.XX` 这种方式，配置项会自动跟踪配置文件的修改而刷新；如果使用 `s = Settings.xx_settings; s.XX` 这种方式，配置项不会自动刷新。
